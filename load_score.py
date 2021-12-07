@@ -10,7 +10,7 @@ def load_score(i=0):
     teams=teamsFull.select('.team')
     team1_name, team1_score=teams[0].select('.name-detail')[0], teams[0].select('.score-detail')[0]
     team2_name=teams[1].select('.name-detail')[0]
-    score=soup.select('.match-info-link-HSB')[1]
+    score=soup.select('.match-info-link-HSB')[i]
     print(score)
     link='https://espncricinfo.com/'+score['href']
     print(link)
