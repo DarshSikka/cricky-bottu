@@ -1,5 +1,7 @@
 from urllib import request
 from bs4 import BeautifulSoup
+from keep_alive import life_goes_on
+life_goes_on()
 from flask import Flask
 app=Flask(__name__)
 import os
