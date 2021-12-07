@@ -2,6 +2,7 @@ from urllib import request
 from bs4 import BeautifulSoup
 from flask import Flask
 app=Flask(__name__)
+import os
 from load_matches import load_matches
 from load_stats import load_players, load_teams
 from load_score import load_score
@@ -63,4 +64,4 @@ async def on_message(msg):
             rankings(players): cricket!players <role>:<format> eg. cricket!players batting:odi
         ''')
         await msg.channel.send(embed=emb)
-bot.run("OTE1NjU4Mzc3MDc2NTcyMjMw.YaezUQ.sLQJQ5Og7gkVSUU8fZn_H5D6lyo")
+bot.run(os.getenv('TOKEN'))
